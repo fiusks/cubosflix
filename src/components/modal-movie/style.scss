@@ -1,0 +1,89 @@
+@import "../../App.scss";
+
+.movie-modal {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  .modal-dialog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: transparentize($color: #000000, $amount: 1);
+    border: none;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      width: 60%;
+    }
+  }
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: none;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .modal-title {
+      font-size: 4rem;
+      @include media-breakpoint-down(lg) {
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 1rem;
+      top: 0rem;
+      filter: invert(88%) sepia(90%) saturate(1%) hue-rotate(269deg)
+        brightness(110%) contrast(97%);
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 50%;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 3rem;
+      text-align: justify;
+      @include media-breakpoint-down(lg) {
+        font-size: 1rem;
+      }
+    }
+    img {
+      @extend .img-fluid;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .movie-categories {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      span {
+        @include media-breakpoint-up(sm) {
+          font-size: 1.4rem;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
