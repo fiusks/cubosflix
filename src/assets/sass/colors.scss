@@ -1,0 +1,14 @@
+$navbar-background: #a785ed;
+$navbar-color: #fdfdfd;
+
+$background-light: #ffffff;
+$background-dark: #242424;
+
+@mixin themeLight {
+  background-color: $background-light;
+}
+
+@mixin themeDark {
+  background-color: $background-dark;
+  color: #ffffff;
+}

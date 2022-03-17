@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+@mixin main-font($size, $weight, $height) {
+  font-family: "Manrope", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin movie-hilight-title {
+  color: #e183c8;
+  @include main-font(2.4rem, 700, 150%);
+}
+
+@mixin movie-rating {
+  color: #fbcd6e;
+  @include main-font(1.2rem, 700, 150%);
+}
+
+@mixin movie-highlight-rating {
+  color: #a785ed;
+  @include main-font(2.4rem, 700, 150%);
+}
+@mixin movie-highlight-genres {
+  @include main-font(2.4rem, 700, 150%);
+}
+
+@mixin movie-highlight-description {
+  @include main-font(1.6rem, 400, 150%);
+}
