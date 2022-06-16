@@ -26,7 +26,7 @@ I made a few modifications in the original design. They aew listed below:
 
 - Responsive layout using Bootstrap
 - Add a few categories to movies display (Action,Adventure and Comedy)
-- Use
+- SASS instead of using CSS
 
 ## Available Scripts
 
