@@ -2,10 +2,12 @@ import "./style.scss";
 import { Row, Col } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CardMovie from "../../components/card-movie";
+import { useNavigate } from "react-router-dom";
 
 import useMovies from "../../hooks/useMovies";
 
 function Search() {
+  const navigate = useNavigate();
   const { search, searchSubmit } = useMovies();
   const [searchResult, setSearchResult] = useState([]);
   useEffect(() => {
@@ -19,6 +21,8 @@ function Search() {
     }
     if (search) {
       searchMovies();
+    } else {
+      navigate("/home");
     }
   }, [searchSubmit]);
 
