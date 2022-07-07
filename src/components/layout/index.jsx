@@ -25,6 +25,14 @@ function Layout() {
     }
     navigate("/search");
   }
+  function handleSearchChange(e){
+    if(e.target.value===""){
+      setSearch("")
+      navigate("/home");
+    }else{
+      setSearch(e.target.value)
+    }
+  }
   return (
     <Container fluid className={`main-container p-0 ${theme}`}>
       <NavBar />
@@ -35,7 +43,7 @@ function Layout() {
             placeholder="Pesquisar..."
             aria-label="Search"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => handleSearchChange(e)}
           />
         </Form>
         <Outlet />
