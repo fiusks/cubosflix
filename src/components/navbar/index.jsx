@@ -17,11 +17,6 @@ function NavBar() {
               <img alt="" src={logo} />
               <h1>Cubos Flix</h1>
             </Navbar.Brand>
-            <Nav>
-              <Nav.Link as={NavLink} to="home">
-                Home
-              </Nav.Link>
-            </Nav>
           </div>
           <Nav>
             <img
